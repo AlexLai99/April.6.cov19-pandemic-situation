@@ -112,7 +112,7 @@ for i in country:
     d3=[]
     for j in date:
         province=tem[tem['countryEnglishName'] == i][tem['updateTime'] == j]['provinceEnglishName'].reset_index(drop=True)
-        a=tem[tem['countryEnglishName'] == i][tem['updateTime'] == j].sum()['province_confirmedCount']
+        b=tem[tem['countryEnglishName'] == i][tem['updateTime'] == j].sum()['province_confirmedCount']
         for k in province:
             #特殊情况：中国总计和各省总计容易混淆
             if k==i:
